@@ -1,0 +1,5 @@
+*/.coverage
+*/.coveragerc
+*/.pylintrc
+*/__pycache__
+.c9
