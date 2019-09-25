@@ -296,7 +296,7 @@ Resources:
       Roles: 
         - 
           Ref: "RootRole"
-  WebServerInstance:
+  WebServerInstance2:
     Type: "AWS::EC2::Instance"
     Properties: 
       IamInstanceProfile: !Ref RootInstanceProfile
@@ -310,7 +310,7 @@ Resources:
             - !Ref WebSecurityGroup
       Tags:
         - Key: Name
-          Value: "TEST-WebServerInstance2"
+          Value: "TEST-WebServerInstance22"
         - Key: CodeDeployInstance
           Value: "TESTWebServer"
         - Key: Owner
@@ -321,8 +321,8 @@ Resources:
             #!/bin/bash -xe
             yum update -y aws-cfn-bootstrap
             aws configure set default.region ${AWS::Region}
-            /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource WebServerInstance --region ${AWS::Region}
-            /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WebServerInstance --region ${AWS::Region}
+            /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource WebServerInstance2 --region ${AWS::Region}
+            /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WebServerInstance2 --region ${AWS::Region}
     CreationPolicy:
       ResourceSignal:
         Timeout: 'PT5M'
@@ -364,9 +364,9 @@ Outputs:
     Description: The hostname for the RDS instance
     Value: !GetAtt LabDBInstance.Endpoint.Address
 
-  TESTWebServerInstanceId:
+  TESTWebServerInstance2Id:
     Description: The TESTWebServer InstanceId Id
-    Value: !Ref WebServerInstance
+    Value: !Ref WebServerInstance2
 
 
 
