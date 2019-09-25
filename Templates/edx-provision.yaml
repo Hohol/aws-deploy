@@ -310,7 +310,7 @@ Resources:
             - !Ref WebSecurityGroup
       Tags:
         - Key: Name
-          Value: "TEST-WebServerInstance"
+          Value: "TEST-WebServerInstance2"
         - Key: CodeDeployInstance
           Value: "TESTWebServer"
         - Key: Owner
