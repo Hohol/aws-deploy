@@ -100,5 +100,5 @@ class ApplicationTestCase(unittest.TestCase):
                             }""",
                           content_type='application/json')
     def fail_test(self):
-        self.assertEqual(1,2)
+        self.assertEqual(1, 2)
         
