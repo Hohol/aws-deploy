@@ -99,6 +99,6 @@ class ApplicationTestCase(unittest.TestCase):
                               "2": { "Route": "DOESNT-EXIST" }
                             }""",
                           content_type='application/json')
+
     def fail_test(self):
         self.assertEqual(1, 2)
-        
