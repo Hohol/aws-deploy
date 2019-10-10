@@ -212,7 +212,7 @@
 <p id="t33" class="stm run hide_run"><span class="nam">all_routes</span> <span class="op">=</span> <span class="nam">database</span><span class="op">.</span><span class="nam">list_routes</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t34" class="stm run hide_run"><span class="nam">all_airports</span> <span class="op">=</span> <span class="nam">database</span><span class="op">.</span><span class="nam">list_airports</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t35" class="stm run hide_run"><span class="nam">airport_dict</span> <span class="op">=</span> <span class="op">{</span><span class="strut">&nbsp;</span></p>
-<p id="t36" class="pln">    <span class="nam">airport</span><span class="op">[</span><span class="str">"local_code"</span><span class="op">]</span> <span class="op">:</span> <span class="op">{</span><span class="str">"name"</span> <span class="op">:</span> <span class="op">(</span><span class="nam">airport</span><span class="op">[</span><span class="str">'name'</span><span class="op">]</span><span class="op">)</span><span class="op">}</span><span class="strut">&nbsp;</span></p>
+<p id="t36" class="pln">    <span class="nam">airport</span><span class="op">[</span><span class="str">"local_code"</span><span class="op">]</span> <span class="op">:</span> <span class="op">{</span><span class="str">"en"</span> <span class="op">:</span> <span class="op">(</span><span class="nam">airport</span><span class="op">[</span><span class="str">'name'</span><span class="op">]</span><span class="op">)</span><span class="op">,</span> <span class="str">"jp"</span> <span class="op">:</span> <span class="op">(</span><span class="nam">airport</span><span class="op">[</span><span class="str">'jp_name'</span><span class="op">]</span><span class="op">)</span><span class="op">}</span><span class="strut">&nbsp;</span></p>
 <p id="t37" class="pln">    <span class="key">for</span> <span class="nam">airport</span> <span class="key">in</span> <span class="nam">all_airports</span><span class="strut">&nbsp;</span></p>
 <p id="t38" class="pln"><span class="op">}</span><span class="strut">&nbsp;</span></p>
 <p id="t39" class="pln"><span class="strut">&nbsp;</span></p>
@@ -276,7 +276,7 @@
 <p id="t97" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t98" class="stm run hide_run"><span class="key">def</span> <span class="nam">route_csv_to_airports</span><span class="op">(</span><span class="nam">route_csv</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t99" class="pln">    <span class="str">"Find airports by route csv"</span><span class="strut">&nbsp;</span></p>
-<p id="t100" class="stm run hide_run">    <span class="nam">airports</span> <span class="op">=</span> <span class="op">[</span><span class="nam">airport_dict</span><span class="op">[</span><span class="nam">route</span><span class="op">]</span><span class="op">[</span><span class="str">'name'</span><span class="op">]</span> <span class="key">for</span> <span class="nam">route</span> <span class="key">in</span> <span class="nam">route_csv</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">","</span><span class="op">)</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
+<p id="t100" class="stm run hide_run">    <span class="nam">airports</span> <span class="op">=</span> <span class="op">[</span><span class="nam">airport_dict</span><span class="op">[</span><span class="nam">route</span><span class="op">]</span> <span class="key">for</span> <span class="nam">route</span> <span class="key">in</span> <span class="nam">route_csv</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">","</span><span class="op">)</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
 <p id="t101" class="stm run hide_run">    <span class="key">return</span> <span class="nam">airports</span><span class="strut">&nbsp;</span></p>
 <p id="t102" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t103" class="stm run hide_run"><span class="key">def</span> <span class="nam">route_csv_to_image</span><span class="op">(</span><span class="nam">route_csv</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
@@ -294,7 +294,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.4</a>,
-            created at 2019-09-05 09:57
+            created at 2019-10-10 14:06
         </p>
     </div>
 </div>
